@@ -46,7 +46,7 @@ function Main(props) {
 				</div>
 
 			</div>
-			<button type="button" className="profile__add-button" onClick={props.onAddPlace} ></button>
+			<button type="button" className="profile__add-button" onClick={props.onAddPlace} />
 		</section>
 		
 		<section className="places">			
