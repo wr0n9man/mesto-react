@@ -8,14 +8,20 @@
 	z-index: 0;
 	border-radius: 120px;
 	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .profile__avatar-button:hover{
 	cursor: pointer;
-	
+}
 
+.profile__avatar-button:hover .profile__avatar{
+
+	opacity: 0.6;
 	background-repeat: no-repeat;
 	background-position: center;
+	z-index:-1;
 }
 
 @media screen and (max-width: 767px) {

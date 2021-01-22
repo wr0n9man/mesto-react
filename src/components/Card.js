@@ -1,6 +1,5 @@
 function Card(props) {
 	function handleClick() {
-		
 		props.onCardClick(props.card);
 	 }  
 	return(
