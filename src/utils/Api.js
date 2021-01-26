@@ -88,6 +88,35 @@ deleteCard(id){
 });
 }
 
+changeLikeCardStatus(id, isLiked){
+  if (isLiked){
+    return fetch(`${this.baseUrl}/cards/likes/${id} `,{
+      method: 'DELETE',
+      headers: this._headers   
+   }).then(res => {
+    if (res.ok) {
+      return res.json();
+    }
+  
+    // если ошибка, отклоняем промис
+    return Promise.reject(`Ошибка: ${res.status}`);
+  });
+  }
+  else{
+    return fetch(`${this.baseUrl}/cards/likes/${id} `,{
+      method: 'PUT',
+      headers: this._headers   
+   }).then(res => {
+    if (res.ok) {
+      return res.json();
+    }
+  
+    // если ошибка, отклоняем промис
+    return Promise.reject(`Ошибка: ${res.status}`);
+  });
+  }
+}
+
 putLike(id){
   return fetch(`${this.baseUrl}/cards/likes/${id} `,{
     method: 'PUT',
