@@ -29,7 +29,7 @@ function Card(props) {
 		<>
 <div id="place">
   <div className="place">
-	  <button type="button" className="place__open" onClick={handleClick}><img src={props.card.link} alt="" className="place__image"/></button>
+	  <button type="button" className="place__open" onClick={handleClick}><img src={props.card.link} alt={props.card.name} className="place__image"/></button>
 	  <button type="button" className={cardDeleteButtonClassName} onClick={handleCardDelete}/>
 	  <div className="place__main">
 		  <h3 className="place__name">{props.card.name}</h3>

@@ -4,7 +4,7 @@ import Main from './Main.js'
 import Footer from './Footer.js';
 import PopupWithForm from "./PopupWithForm.js";
 import ImagePopup from "./ImagePopup.js";
-import Api from "../utils/Api.js";
+import Api from "../utils/api.js";
 import { currentUserContext } from "../contexts/CurrentUserContext";
 import { cardContext } from "../contexts/CardContext";
 import  EditProfilePopup  from "./EditProfilePopup";
@@ -16,8 +16,8 @@ const [isEditProfilePopupOpen, setIsEditProfilePopupOpen]= React.useState(false)
 const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen]= React.useState(false);
 const [isAddPlacePopupOpen, setIsAddPlacePopupOpen]= React.useState(false);
 const [isCardPopupOpen, setIsCardPopupOpen]= React.useState(false);
-const [selectedCard , setSelectedCard ]= React.useState(0);
-const [currentUser, setCurrentUser ]= React.useState([]);
+const [selectedCard , setSelectedCard ]= React.useState("card");
+const [currentUser, setCurrentUser ]= React.useState("user");
 const [cards , setCards ]= React.useState([]);
 
 React.useEffect(()=>{
@@ -104,6 +104,9 @@ function handleCardLike(card) {
 	  const newCards = cards.map((c) => c._id === card._id ? newCard : c);
 	  // Обновляем стейт
 	  setCards(newCards);
+	})
+	.catch((err)=>{     //попадаем сюда если один из промисов завершаться ошибкой
+		console.log(err);
 	});
 }
 
@@ -118,6 +121,9 @@ function handleDeleteCard(card) {
 	  const newCards = cards.filter((c) => c._id !== card._id);
 	  // Обновляем стейт
 	  setCards(newCards);
+	})
+	.catch((err)=>{     //попадаем сюда если один из промисов завершаться ошибкой
+		console.log(err);
 	});
 }
 

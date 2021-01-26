@@ -3,8 +3,8 @@ import React from 'react';
 import PopupWithForm from "./PopupWithForm.js";
 
 function AddPlacePopup(props) {
-	const [place, setPlace]=React.useState();
-	const [link , setLink]= React.useState();
+	const [place, setPlace]=React.useState("place");
+	const [link , setLink]= React.useState("link");
 
 	function handleChangePlace(e) {
 		setPlace(e.target.value)

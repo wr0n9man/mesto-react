@@ -1,6 +1,5 @@
 import React from 'react';
 import penPath from'../image/avatar-redact.svg'
-import Api from "../utils/Api.js";
 import Card from "./Card.js";
 import { currentUserContext } from "../contexts/CurrentUserContext";
 import { cardContext  } from "../contexts/CardContext";
