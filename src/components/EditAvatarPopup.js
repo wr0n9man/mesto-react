@@ -6,9 +6,7 @@ function EditAvararPopup(props) {
 	const imageRef = React.useRef();
 	const currentUser = React.useContext(currentUserContext);
 	
-	React.useEffect(() => {
-		imageRef.current.value=currentUser.avatar
-	 }, [currentUser]); 
+	
 
 	function handleSubmit(e) {
 				// Запрещаем браузеру переходить по адресу формы

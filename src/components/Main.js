@@ -36,10 +36,10 @@ function Main(props) {
 		
 		<section className="places">			
 		{
-		cards.map((card , i)=>(
-		<div key={i}>
-		<Card card={card} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onCardDelete={props.onCardDelete}/>
-		</div>))}
+		cards.map((card)=>(
+			<Card key={card._id} card={card} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onCardDelete={props.onCardDelete}/>
+			))}
+ 
 		</section>
 	</div>
 				

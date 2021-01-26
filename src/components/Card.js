@@ -27,7 +27,7 @@ function Card(props) {
 	 const cardLikeButtonClassName = `place__counter_button ${isLiked?'place__counter_button_active':''}`; 
 	return(
 		<>
-<div id="place">
+<div >
   <div className="place">
 	  <button type="button" className="place__open" onClick={handleClick}><img src={props.card.link} alt={props.card.name} className="place__image"/></button>
 	  <button type="button" className={cardDeleteButtonClassName} onClick={handleCardDelete}/>
