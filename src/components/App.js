@@ -4,7 +4,7 @@ import Main from './Main.js'
 import Footer from './Footer.js';
 import PopupWithForm from "./PopupWithForm.js";
 import ImagePopup from "./ImagePopup.js";
-import Api from "../utils/api.js";
+import Api from "../utils/api";
 import { currentUserContext } from "../contexts/CurrentUserContext";
 import { cardContext } from "../contexts/CardContext";
 import  EditProfilePopup  from "./EditProfilePopup";

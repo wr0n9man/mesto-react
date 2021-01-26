@@ -1,10 +1,9 @@
 import React from 'react';
-import { currentUserContext } from "../contexts/CurrentUserContext";
 import PopupWithForm from "./PopupWithForm.js";
 
 function EditAvararPopup(props) {
 	const imageRef = React.useRef();
-	const currentUser = React.useContext(currentUserContext);
+
 	
 	
 
@@ -21,7 +20,7 @@ function EditAvararPopup(props) {
 
 	return(	<PopupWithForm name="avatar" title="Обновить аватар" isOpen={props.isOpen}  onClose ={props.onClose} onSubmit={handleSubmit}
 	children={<>
-	<input type="url" name="avatar" className="popup__input" placeholder="Ссылка на картинку" required ref={imageRef} defaultValue={imageRef}
+	<input type="url" name="avatar" className="popup__input" placeholder="Ссылка на картинку" required ref={imageRef} 
 	id="link_avatar-input"/>
 		<span className="popup__input-error" id="link_avatar-input-error"></span>
 
