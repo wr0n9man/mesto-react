@@ -4,7 +4,7 @@
   this._headers = headers;
 
 	}
- 
+ //я было переназвал только почему то извенение на гит не залилось
 	getInfoUser(){
 		return fetch(`${this.baseUrl}/users/me `,{
 			headers: this._headers
